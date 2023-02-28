@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>id/rewards</title>
+  </head>
+  <body>
+    <header>
+      <h1>Reward For user</h1>
+    </header>
+
+    <main>
+      <section id="users-list">
+        <h2>Users List</h2>
+        <button id="create-user">Create New User</button>
+        <section>
+        <iframe src="login.html" width="400" height="300"></iframe>
+        </section>
+        <table>
+          <thead>
+            <tr>
+              <th>Sl.no</th>
+              <th>Name</th>
+              <th>P5 balance</th>
+              <th>Reward balance</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>1000</td>
+              <td>200</td>
+              <td><button class="edit-user">Edit</button></td>
+            </tr>
+             <tr>
+              <td>2</td>
+              <td>Deepak Singh</td>
+              <td>500</td>
+              <td>120</td>
+              <td><button class="edit-user">Edit</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Derek Allen</td>
+              <td>1000</td>
+              <td>250</td>
+              <td><button class="edit-user">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="new-user">
+        <h2>Create New User</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <button id="save-user">Save</button>
+          <button id="cancel-user">Cancel</button>
+        </form>
+      </section>
+
+      <section id="view-user">
+        <h2>User Details</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <button id="save-user">Save</button>
+          <button id="p5-balance">P5 Balance</button>
+          <button id="reward-balance">Reward Balance</button>
+        </form>
+      </section>
+
+      <section id="p5-history">
+        <h2>P5 History</h2>
+        <button id="create-reward">Create New Reward</button>
+        <p>P5 Balance: 1000</p>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Date-Time</th>
+              <th>P5 given</th>
+              <th>User Name</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>2022-01-01 12:00:00</td>
+              <td>100</td>
+              <td>Jane Doe</td>
+              <td><button class="delete-p5">Delete</button></td>
+            </tr>
+            <!-- add more rows for each P5 transaction -->
+          </tbody>
+        </table>
+      </section>
+
+      <section id="reward-history">
+        <!-- Reward History (route = /:id/rewards) -->
+<div id="reward-history" class="container">
+  <h2>Reward History</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Balance: <span id="rewards-balance"></span></h3>
+    </div>
+    <div class="col-md-6">
+      <button id="new-reward-button" class="btn btn-primary float-end">Create New Reward</button>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Date-Time</th>
+        <th>Rewards Received</th>
+        <th>User Name</th>
+      </tr>
+    </thead>
+    <tbody id="reward-history-table">
+
+    </tbody>
+    <form id="new-reward-form">
+  <div>
+    <label for="awardee-select">Select User:</label>
+    <select id="awardee-select" name="awardee">
+    </select>
+  </table>
+</div>
+<script src="script.js"></script>
+</main>
+    <footer>
+      <p>&copy; 2023 Deepak</p>
+    </footer>
+  </body>
+</html>

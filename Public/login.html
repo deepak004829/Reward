@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="button" onclick="login()">Login</button>
+    </form>
+    <p id="error-message"></p>
+    <script>
+      function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        if (username === "admin" && password === "password") {
+          window.location.href = "home.html";
+        } else {
+          document.getElementById("error-message").textContent = "Invalid username or password.";
+        }
+      }
+    </script>
+  </body>
+</html>
